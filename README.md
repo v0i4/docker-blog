@@ -1,19 +1,12 @@
-# Blog
+para startar a aplicacao:
+- configurar p dev.exs com o seu banco de dados postgres
 
-To start your Phoenix server:
+para startar a aplicacao com o docker-compose:
+- precisa configurar o dev.exs > hostname para 'db'
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+para startar a aplicacao em ambiente de docker de producao
+-necessario passar como variaveis de ambiente: SECRET_KEY_BASE, DATABASE_URL
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+-docker build -t nomerepo/nomeapp:versao .
+-docker run --env-file .env -p 8080:4000 nomerepo/nomeapp:versao
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
